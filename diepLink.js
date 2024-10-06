@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Diep Party Link Button
+// @name         Diep Copy Link While Alive
 // @namespace    none
 // @version      1.0
 // @description  Adds a button to copy the party link while alive
@@ -9,19 +9,9 @@
 // @run-at       document-idle
 // ==/UserScript==
 
-
 setTimeout(() => {
     console.log("initialising diep copy link button")
 
-    const style = `
-
-    `
-
-    let styleEl = document.createElement("style")
-    styleEl.innerHTML = style
-    document.body.appendChild(styleEl)
-
-    document.getElementById("quick-exit-game")
     let newEl = document.createElement("div")
     let buttonEl = document.createElement("button")
     buttonEl.addEventListener("click", () => {document.getElementById("copy-party-link").click()})
